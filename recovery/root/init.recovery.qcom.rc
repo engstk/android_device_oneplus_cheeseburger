@@ -92,7 +92,7 @@ on boot
     setprop sys.usb.config adb
     
     # Enable OTG
-    write /sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/usb/otg_switch 1
+    write /sys/class/power_supply/usb/otg_switch 1
 
 on property:crypto.ready=0
     stop sbinqseecomd
